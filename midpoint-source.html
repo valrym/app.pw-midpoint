@@ -1,0 +1,41 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<!--
+   by god, i hate midpoint.
+   eat me.
+--!>
+
+
+<form id="midpoint" action="process.php">
+<fieldset>
+<legend>midpoint formula</legend>
+<div>
+ <label for="int-1-1">x1:</label>
+ <input name="int-1-1a" type="string" placeholder="(x1, y1)" required autofocus id="x1">
+ <label for="int-2-1">x2:</label>
+ <input name="int-2-1a" type="string" placeholder="(x2, y2)" required id="x2">
+</div>
+<div>
+ <label for="int-1-2">y1:</label>
+ <input name="int-1-2a" type="string" placeholder="(x1, y1)" required autofocus id="y1">
+ <label for="int-2-2">y2:</label>
+ <input name="int-2-2a" type="string" placeholder="(x2, y2)" required id="y2">
+<script>
+ function Midpoint(){
+  var testx = parseFloat($('#x2').val()) + parseFloat($('#x1').val());
+  var testy = parseFloat($('#y2').val()) + parseFloat($('#y1').val());
+  var xtrue = (testx/2);
+  var ytrue = (testy/2);
+  var ans= "(" + xtrue + ", " + ytrue + ")";
+  return ans;
+ }
+
+</script>
+</div>
+<div>
+
+ <input name="calculate" type="button" value="calculate" onclick="alert(Midpoint());">
+</div>
+</fieldset>
+
+</form>
